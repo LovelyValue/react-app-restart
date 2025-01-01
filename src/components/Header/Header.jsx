@@ -1,7 +1,7 @@
 import './Header.css';
 
 function Header() {
-	return;
+	return <>Logo</>;
 }
 
 export default Header;

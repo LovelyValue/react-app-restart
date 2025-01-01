@@ -1,7 +1,7 @@
 import './Body.css';
 
-function Body() {
-	return;
+function Body({ children }) {
+	return <div className='body'>{children}</div>;
 }
 
 export default Body;
