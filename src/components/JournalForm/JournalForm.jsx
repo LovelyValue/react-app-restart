@@ -10,8 +10,22 @@ function JournalForm() {
 		console.log(inputData);
 	};
 
+	// const [state, setState] = useState({
+	// 	age: 40,
+	// });
+
+	// const [state2, setState2] = useState([1, 2, 3]);
+
 	const addJournalItem = e => {
 		e.preventDefault();
+
+		// state.age = state.age + 1;
+		// setState({ ...state });
+
+		// state2.push(5);
+
+		// setState2([...state2]);
+
 		const formData = new FormData(e.target);
 		const formProps = Object.fromEntries(formData);
 		console.log(formProps);
@@ -19,6 +33,8 @@ function JournalForm() {
 
 	return (
 		<form className='journal-form' onSubmit={addJournalItem}>
+			{/* {state.age}
+			{state2} */}
 			<input type='text' name='title' />
 			<input type='date' name='date' />
 			<input type='text' name='tag' value={inputData} onChange={inputChange} />
