@@ -10,12 +10,9 @@ import Body from './layouts/Body/Body';
 import LeftPanel from './layouts/LeftPanel/LeftPanel';
 
 const INITIAL_DATA = [
+	{ id: 1, title: 'Приключение', date: new Date(), text: 'Какой-то текст' },
 	{
-		title: 'Приключение',
-		date: new Date(),
-		text: 'Какой-то текст',
-	},
-	{
+		id: 2,
 		title: 'Приключение',
 		date: new Date(),
 		text: 'Какой-то текст',
@@ -32,8 +29,17 @@ function App() {
 				text: item.text,
 				title: item.title,
 				date: new Date(item.date),
+				id: Math.max(...oldItems.map(i => i.id)) + 1,
 			},
 		]);
+	};
+
+	const sortItems = (a, b) => {
+		if (a.date < b.date) {
+			return 1;
+		} else {
+			return -1;
+		}
 	};
 
 	return (
@@ -42,8 +48,8 @@ function App() {
 				<Header />
 				<JournalAddButton />
 				<JournalList>
-					{items.map(el => (
-						<CardButton>
+					{items.sort(sortItems).map(el => (
+						<CardButton key={el.id}>
 							<JournalItem title={el.title} date={el.date} text={el.text} />
 						</CardButton>
 					))}
