@@ -4,7 +4,45 @@
 	gap: 30px;
 }
 
+.input-title {
+	border: none;
+	background: none;
+	font-size: 32px;
+	font-weight: 600;
+	font-style: normal;
+	line-height: normal;
+	border-bottom: 1px solid #757373;
+	width: 100%;
+}
+
+.form-label {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	min-width: 150px;
+}
+
+.form-row {
+	display: flex;
+	align-items: center;
+}
+
+.form-label img {
+	width: 18px;
+	height: 18px;
+}
+
+.input {
+	border: none;
+	background: none;
+	font-size: 14px;
+	font-weight: 600;
+	font-style: normal;
+	line-height: normal;
+	border-bottom: 1px solid #757373;
+	width: 100%;
+}
+
 .invalid {
-	border: 1px solid red;
-	background: #7b3a3a;
+	border-bottom: 1px solid red;
 }
