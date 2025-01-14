@@ -7,11 +7,6 @@ import JournalList from './components/JournalList/JournalList';
 import Body from './layouts/Body/Body';
 import LeftPanel from './layouts/LeftPanel/LeftPanel';
 
-// const INITIAL_DATA = [
-// 	// { "id": 1, "title": "Приключение", "date": "2024/03/03", "text": "Какой-то текст" },
-// 	// { id: 2, title: 'Приключение', date: new Date(), text: 'Какой-то текст' },
-// ];
-
 function App() {
 	const [items, setItems] = useState([]);
 
